@@ -1,0 +1,243 @@
+@font-face {
+    font-family: 'bttf';
+    font-style: normal;
+    font-weight: normal;
+    src: local('bttf'), url('./fonts/BTTF.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'digital-7';
+    font-style: normal;
+    font-weight: normal;
+    src: local('digital-7'), url('./fonts/digital-7.ttf') format('truetype');
+}
+
+/* fixes mix-blend-mode bug in chrome 58+ */
+html {
+    background: #fff; }
+
+body {
+    margin: 0px;
+}
+
+#logoAndName{
+    display: flex;
+    flex-direction: row;
+}
+
+#logoAndName p{
+    margin: auto auto auto 10px;;
+}
+
+#header-img{
+    height: 2em;
+    margin: auto auto auto 20px;
+}
+
+#header{
+    position: fixed;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.bttfText {
+    margin: 10px 40px 0px 0px;    
+    font-size: 20px;
+    background-image: -webkit-linear-gradient(#CB1920, #FBE928);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position:relative; 
+    font-family: bttf;       
+}
+
+.bttfText::after{
+    background: none;
+    content: attr(data-text);
+    left: 0;
+    top: 0;
+    z-index: -10;
+    position: absolute;
+    text-shadow:
+    -1px -1px 0 #00AEEF,
+    1px -1px 0 #00AEEF,
+    -1px 1px 0 #00AEEF,
+    1px 1px 0 #00AEEF,
+    -2px 2px 2px #000,
+    -4px 4px 16px #000;    
+
+}
+
+#form{
+    position: relative;
+    margin: auto auto 40px auto;
+    text-align: center;
+}
+
+#form p{
+    font-size: 32px;
+    color: white;
+}
+
+#flux-capacitor {
+    background-image: url("https://s3-us-west-1.amazonaws.com/fcc-static-items/product-landing-page/timeMachine.jpg"),
+    linear-gradient(0deg,
+    black,
+    gray,
+    white,
+    white,
+    white,
+    white,
+    white);    
+    background-blend-mode: multiply;    
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;    
+}
+
+#quotes{
+    background: #000;
+    padding: 12px;
+    font-size: 22px;
+    color: white;
+    text-align: justify;
+}
+
+#how-it-works {
+    background: #000;    
+    text-align: center;
+}
+
+#pricing{
+    background: linear-gradient(180deg,
+    #000,
+    #13171A);
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    padding-bottom: 40px;
+}
+
+.priceBox {
+    background: white;
+    min-width: 320px;
+    min-height: 300px;
+    outline: 1px solid #000;
+    margin: 10px;
+    text-align: center;
+    /* position: relative; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.priceBox ul{
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0px;
+    margin-top: 8px;
+    font-size: 18px;
+}
+
+.priceBox li{
+    margin-top: 8px;    
+}
+
+.packageOption {
+    width: 100%;
+    font-size: 24px;
+    background: #00AEEF;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.digitalText{
+    font-family: digital-7;
+    font-size: 48px;
+    color: #07E60D;
+}
+
+@media only screen and (min-width: 768px) {
+    #video {
+        width: 560px;
+        height: 315px;
+    }
+    /* tablets and desktop */
+    #quotes p{
+        margin: auto;
+        padding: 10px;
+        max-width: 800px;
+        text-align: left;
+    }
+
+    #pricing{
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    /* phones */
+    body{
+        max-width: 100%;
+    }
+    #video {                
+        max-width: 100%;
+        width: 100%;
+        max-height: auto;
+    }    
+    #header{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-content: center;
+    }    
+    #logoAndName{
+        justify-content: center;
+        align-items: center;
+        margin-top: 15px;        
+    }
+    #header-img{
+        margin:auto;
+        margin-right: 10px;
+        margin-left: 20px;
+    }
+    #logoAndName p {
+        margin:auto;
+        margin-left: 10px;
+    }
+    ul {
+        flex-direction: column;
+        padding-left: 20px;
+    }    
+
+    #form{
+        margin: auto 0px 40px 0px;
+        text-align: center;
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+    #video {
+        max-width: 100%;
+        width: 100%;
+        max-height: auto;
+    }        
+    /* portrait phones */
+}

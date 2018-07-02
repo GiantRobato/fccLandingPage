@@ -1,0 +1,83 @@
+<!<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Flux Capacitor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js" ></script>    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<header id="header">
+    <div id="logoAndName">
+        <img id="header-img" src="https://s3-us-west-1.amazonaws.com/fcc-static-items/product-landing-page/logo.png">
+        <p class="bttfText" data-text="FLUX CAPACITOR">FLUX CAPACITOR</p>
+    </div>
+    <nav id="nav-bar">
+        <ul>
+            <li class="bttfText" data-text="quotes"><a class="nav-link" href="#quotes">quotes</a></li>
+            <li class="bttfText" data-text="how it works"><a class="nav-link" href="#how-it-works">how it works</a></li>
+            <li class="bttfText" data-text="pricing"><a class="nav-link" href="#pricing">pricing</a></li>
+        </ul>
+    </nav>
+</header>
+<div id="main">
+    <div id="flux-capacitor">
+        <form id="form" action="https://www.freecodecamp.com/email-submit">
+            <p>Upgrade your Delorean Today</p>
+            <input type="email" name="email" id="email" class="input-field" placeholder="Email" required>
+            <input id="submit" type="submit" value="Purchase">            
+        </form>
+    </div>
+    <div id="quotes">
+        <p>When asked "Why a DeLorean?" The inventor, Dr. Emmet Brown, said this: "The way I see it, if you're gonna build a time machine into a car, why not do it with some *style?*"</p>
+        <!-- <i class="fa fa-car" style="font-size:48px;"></i> -->
+    </div>           
+    <div id="how-it-works">
+        <div class="embedContainer">
+            <iframe id="video" src="https://www.youtube.com/embed/EhU862ONFys" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+    </div>
+    <div id="pricing">
+        <div class="priceBox">
+            <div class="packageOption">
+                Chicken Package
+            </div>
+            <ul>
+                <li class="digitalText">$ 88</li>
+                <li>Get a Hoverboard</li>
+            </ul>
+            <input type="submit" value="Purchase">                                                
+        </div>
+        <div class="priceBox">
+            <div class="packageOption">
+                Doc Package
+            </div>
+            <ul>
+                <li class="digitalText">+$ 31415</li>
+                <li>Get a Hoverboard</li>
+                <li>Get a Flux Capacitor</li>
+            </ul>
+            <input class="bottom" type="submit" value="Purchase">                                                
+        </div>
+        <div class="priceBox">
+            <div class="packageOption">
+                Time Traveller Package
+            </div>  
+            <ul>
+                <li class="digitalText">+$ 271828</li>
+                <li>Get a Hoverboard</li>
+                <li>Get a Flux Capacitor</li>                
+                <li>Get a DeLeroean</li>                
+                <li>(Installation included)</li>                
+            </ul>
+            <input type="submit" value="Purchase">                                                                      
+        </div>                    
+    </div>    
+
+</div>
+</body>
+</html>
